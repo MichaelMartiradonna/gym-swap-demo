@@ -4,7 +4,7 @@ Gym Swap helps people explore reviewed exercises and swap a planned exercise for
 
 **133 exercises · 270 reviewed comparisons · 357 automated tests in the source suite.** Deterministic rules decide; optional grounded AI explains from reviewed notes.
 
-**[Try the demo](DEMO_URL_TBD)** · screenshot: ![Gym Swap 2.8.0 on a phone](../gym-swap-2.8.0-phone.jpg)
+**[Try the demo](https://gymswap.seeform.ai)** · screenshot: ![Gym Swap 2.8.0 on a phone](../gym-swap-2.8.0-phone.jpg)
 
 Architecture:
 - Static frontend built with esbuild; one saved workout list per browser, no accounts.

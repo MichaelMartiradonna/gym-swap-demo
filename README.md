@@ -2,7 +2,7 @@
 
 A public, read-only, fully static snapshot of the Gym Swap frontend: the real app, the complete reviewed library (133 exercises, 270 reviewed comparisons), a preloaded synthetic sample workout, equipment-note entry and occurrence-specific swap selection with Undo. No sign-in, no server, no database, no AI backend. "Ask about this swap" returns the written fallback, exactly as in the owner's private Lab.
 
-Demo URL: _DEMO_URL_TBD_ (fill in after the first deployment). Pages: `/` standard app, `/pilot/` opt-in six-row pilot, `/about/` scope and disclaimer.
+Demo URL: [https://gymswap.seeform.ai](https://gymswap.seeform.ai) (hosted on Cloudflare Pages from this repository's `dist/`). Pages: `/` standard app, `/pilot/` opt-in six-row pilot, `/about/` scope and disclaimer.
 
 Production (owner-private 2.8.1) and the private Gym Swap Lab are unaffected. This checkout reads the Lab's built output and never writes to it.
 

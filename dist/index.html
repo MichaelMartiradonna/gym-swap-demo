@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#143b3a">
+  <meta name="robots" content="noindex">
+  <meta name="description" content="Explore reviewed exercises and swaps. Choose an exercise and optionally check your equipment.">
+  <title>Demo · Gym Swap · Explore exercises</title>
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <link rel="stylesheet" href="/prototype/styles.css?v=2.8.1">
+  <link rel="stylesheet" href="/prototype/workout.css?v=2.8.1">
+<script data-demo="api-shim">
+// Portfolio demo: all /api/ routes are unavailable, exactly as in the Lab.
+(function(){var original=window.fetch;window.fetch=function(input,init){
+  var path='';try{path=new URL(typeof input==='string'?input:input&&input.url||'',window.location.href).pathname;}catch(e){}
+  if(path.indexOf('/api/')===0)return Promise.resolve(new Response("{\"status\":\"unavailable\",\"answer\":\"Live AI is disabled in this portfolio demo. Use the written card and deterministic comparison.\",\"citations\":[]}",{status:503,headers:{'Content-Type':'application/json','Cache-Control':'no-store'}}));
+  return original.apply(this,arguments);};})();
+</script>
+<script data-demo="sample-workout">
+// Portfolio demo: preload one synthetic sample workout on first visit only.
+// Runs before the app module. Never overwrites an existing saved workout.
+(function(){try{
+  var KEY="gym-swap.workouts.v1",LEGACY="gym-swap.active-workout.v1",storage=window.localStorage;
+  if(storage.getItem(KEY)!==null||storage.getItem(LEGACY)!==null)return;
+  storage.setItem(KEY,"{\"version\":1,\"activeId\":\"demo-sample-workout\",\"workouts\":[{\"version\":1,\"id\":\"demo-sample-workout\",\"title\":\"Sample workout\",\"sourceText\":\"Goblet squat — 3 x 8; rest 60 sec\\nDumbbell RDL — 3 x 10\\nSeated cable row — 3 x 12\\nMachine chest press — 3 x 10\\nBarbell split squat — 2 x 8 each leg; bar on upper back, both feet on the floor\\nSingle-leg floor bridge — 2 x 12 each side\",\"notes\":\"\",\"entries\":[{\"id\":\"demo-sample-line-1\",\"label\":\"Goblet squat\",\"notes\":\"3 x 8; rest 60 sec\",\"sourceText\":\"Goblet squat — 3 x 8; rest 60 sec\",\"matchId\":\"goblet_squat\",\"matchSignature\":\"a1c3e2a1\",\"review\":\"matched\",\"choice\":null,\"candidates\":[\"goblet_squat\",\"goblet_box_squat\",\"goblet_split_squat\",\"heel_supported_goblet_squat\"],\"warning\":\"\"},{\"id\":\"demo-sample-line-2\",\"label\":\"Dumbbell RDL\",\"notes\":\"3 x 10\",\"sourceText\":\"Dumbbell RDL — 3 x 10\",\"matchId\":\"dumbbell_rdl\",\"matchSignature\":\"a8049b50\",\"review\":\"matched\",\"choice\":null,\"candidates\":[\"dumbbell_rdl\",\"single_leg_db_rdl\",\"two_db_single_leg_rdl\"],\"warning\":\"\"},{\"id\":\"demo-sample-line-3\",\"label\":\"Seated cable row\",\"notes\":\"3 x 12\",\"sourceText\":\"Seated cable row — 3 x 12\",\"matchId\":\"seated_cable_row\",\"matchSignature\":\"b0bca9ff\",\"review\":\"matched\",\"choice\":null,\"candidates\":[\"seated_cable_row\"],\"warning\":\"\"},{\"id\":\"demo-sample-line-4\",\"label\":\"Machine chest press\",\"notes\":\"3 x 10\",\"sourceText\":\"Machine chest press — 3 x 10\",\"matchId\":\"chest_press_machine\",\"matchSignature\":\"e26e8421\",\"review\":\"matched\",\"choice\":null,\"candidates\":[\"chest_press_machine\"],\"warning\":\"\"},{\"id\":\"demo-sample-line-5\",\"label\":\"Barbell split squat\",\"notes\":\"2 x 8 each leg; bar on upper back, both feet on the floor\",\"sourceText\":\"Barbell split squat — 2 x 8 each leg; bar on upper back, both feet on the floor\",\"matchId\":\"barbell_split_squat\",\"matchSignature\":\"9b936331\",\"review\":\"matched\",\"choice\":null,\"candidates\":[\"barbell_split_squat\"],\"warning\":\"\"},{\"id\":\"demo-sample-line-6\",\"label\":\"Single-leg floor bridge\",\"notes\":\"2 x 12 each side\",\"sourceText\":\"Single-leg floor bridge — 2 x 12 each side\",\"matchId\":\"single_leg_floor_bridge\",\"matchSignature\":\"3624164b\",\"review\":\"matched\",\"choice\":null,\"candidates\":[\"single_leg_floor_bridge\"],\"warning\":\"\"}],\"position\":0,\"warnings\":[]}]}");
+}catch(e){}})();
+</script>
+  <script type="module" src="/prototype/app.mjs?v=2.8.1"></script>
+<link rel="stylesheet" href="/demo.css"></head>
+<body><aside class="demo-banner" aria-label="Portfolio demo"><strong>Gym Swap</strong><span>Portfolio demo · reviewed library · AI explanations disabled</span><nav aria-label="Demo pages"><a href="/">Standard app</a><a href="/pilot/">Six-row pilot</a><a href="/about/">About</a><a href="https://github.com/MichaelMartiradonna" target="_blank" rel="noopener">GitHub ↗</a></nav><small>Public read-only snapshot of reviewed build Workout library 11e4acedad8a. A sample workout is preloaded; everything you enter stays in this browser. Written cards and deterministic comparisons work; "Ask about this swap" returns the written fallback.</small></aside>
+  <a class="skip-link" href="#search-section">Skip to exercises</a>
+  <header class="site-header"><span class="brand">Gym Swap</span><details class="site-menu" id="site-menu"><summary>Menu</summary><nav aria-label="Session and preferences"><button type="button" class="text-button" id="new-session">New session</button><button type="button" class="text-button" id="preferences-toggle" data-action="preferences" aria-controls="preferences-panel" aria-expanded="false">Exercise preferences</button></nav></details></header>
+  <main>
+    <div class="search-intent primary-navigation" role="group" aria-label="What would you like to do?"><button type="button" data-intent="browse" aria-pressed="true">Browse exercises</button><button type="button" data-intent="replace" aria-pressed="false">Replace an exercise</button><button type="button" data-intent="workout" aria-pressed="false">Use a workout</button></div>
+    <section id="workout-resume" class="workout-resume" aria-label="Saved workout" hidden></section>
+    <section id="equipment-note-panel" class="equipment-note-panel" aria-label="Equipment notes for this visit"></section>
+    <section id="workout-workspace" class="workout-workspace" aria-label="Workout" hidden></section>
+    <section id="search-section" class="search-panel" tabindex="-1" aria-labelledby="search-heading">
+      <h1 id="search-heading">Explore exercises</h1>
+      <form id="search-form" role="search" novalidate>
+        <label class="sr-only" for="exercise-search">Search an exercise, movement, or muscle</label>
+        <div class="search-box"><input id="exercise-search" type="search" role="combobox" autocomplete="off" spellcheck="false" maxlength="180" placeholder="Exercise, movement, or muscle" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestions" aria-describedby="search-message"><button type="submit" class="search-submit" aria-label="Search">Search</button></div>
+        <ul id="search-suggestions" class="search-suggestions" role="listbox" aria-label="Search suggestions" hidden></ul>
+        <p id="search-message" class="help" role="status" aria-live="polite"></p>
+      </form>
+      <div class="browse-controls" aria-label="Browse exercises"><span>Browse by</span><button class="browse-button" type="button" data-browse="Movement" aria-expanded="false" aria-controls="browse-options">Movement</button><button class="browse-button" type="button" data-browse="Muscle group" aria-expanded="false" aria-controls="browse-options">Muscle group</button></div>
+      <div id="browse-options" class="browse-options" hidden></div>
+      <div id="quick-starts" class="quick-starts"><p class="eyebrow">Available swaps</p><button class="start-option" type="button" data-start="seated_cable_row">Seated cable row <span>See swaps</span></button><button class="start-option" type="button" data-start="chest_press_machine">Machine chest press <span>See swaps</span></button><button class="start-option" type="button" data-start="leg_press">Leg press <span>See swap</span></button><button class="start-option" type="button" data-start="barbell_rdl">Barbell Romanian deadlift <span>See swap</span></button><button class="start-option" type="button" data-start="hip_thrust_machine">Hip-thrust machine <span>See swap</span></button></div>
+      <details class="review-starts" id="day1-review"><summary id="day1-review-heading">Review Muscle Endurance · Day 1</summary><p class="help">Five starting exercises and their 38 reviewed alternatives. This is the content review, not an imported workout.</p><div id="day1-exercises"></div></details>
+    </section>
+    <section id="preferences-panel" class="preference-panel" hidden aria-labelledby="preferences-heading"></section>
+    <div id="preference-feedback" class="preference-feedback" role="status" aria-live="polite" hidden></div>
+    <section id="results-workspace" hidden aria-label="Exercise results"><div class="results-toolbar"><button id="change-search" class="text-button" type="button" data-action="next">Change search</button><label class="equipment-filter-switch" for="equipment-filter"><input type="checkbox" role="switch" id="equipment-filter">Filter by my equipment</label><button class="filter-toggle" type="button" id="filter-toggle" data-action="filter" aria-expanded="false" aria-controls="filter-panel">Edit equipment</button></div><section id="filter-panel" class="filter-panel" hidden aria-labelledby="filter-heading"></section><section id="result-panel" class="result-panel" aria-labelledby="result-heading"><div id="result"></div><div id="explanation" hidden></div></section></section>
+    <p class="development-note"><strong>In development:</strong> broader exercise discovery, more flexible equipment matching, and expanded source-backed explanations.</p>
+    <footer class="beta-footer"><div class="footer-meta"><strong>Early beta</strong><span id="build-label">Build 2.8.1</span><span id="library-size">Exercise library</span></div><nav aria-label="Beta information" class="footer-links"><a href="/about/" target="_blank" rel="noopener">Scope &amp; disclaimer<span class="sr-only"> (opens in a new tab)</span></a><a href="mailto:xmichaeljohn@gmail.com?subject=Gym%20Swap%20beta%20feedback">Feedback</a></nav></footer>
+    <noscript><p>Enable JavaScript to search exercises and check equipment.</p></noscript>
+  </main>
+  <div id="announcer" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>

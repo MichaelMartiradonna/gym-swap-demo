@@ -1,0 +1,5 @@
+.demo-banner{margin:12px auto;padding:14px 18px;max-width:960px;box-sizing:border-box;border:2px dashed #725409;background:#fff5d9;color:#382b0a;border-radius:8px;display:flex;flex-wrap:wrap;gap:8px 16px;font:15px/1.5 system-ui,sans-serif}
+.demo-banner strong{font-size:17px}.demo-banner nav{display:flex;flex-wrap:wrap;gap:16px;flex-basis:100%}.demo-banner a{color:#143b3a;text-decoration:underline}.demo-banner small{flex-basis:100%}
+@media(max-width:600px){.demo-banner{margin:10px;max-width:calc(100% - 20px);padding:12px}}
+
+.demo-note{margin-top:4px}

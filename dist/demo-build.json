@@ -1,0 +1,121 @@
+{
+  "demo": "gym-swap-demo",
+  "modelCalls": "disabled",
+  "source": {
+    "lab": "private Lab built frontend (dist/client) plus its snapshot manifest",
+    "snapshotId": "84beb762a173d64d9d4c8d19174d7c1f2a6b3e7df185c36775b87495b6bf95f7",
+    "sourceRevision": "11e4acedad8ab082c18ab74b54b5253a4d1a6ed62578ac3d21f9db2b15a1e9ff",
+    "sourceBuild": "2.8.1",
+    "label": "Workout library",
+    "scope": "M4 follow-up: local saved workouts, unidentified-entry continuation, RDL name/swap clarity and optional equipment-name completion",
+    "labBuild": {
+      "snapshotId": "84beb762a173d64d9d4c8d19174d7c1f2a6b3e7df185c36775b87495b6bf95f7",
+      "sourceRevision": "11e4acedad8ab082c18ab74b54b5253a4d1a6ed62578ac3d21f9db2b15a1e9ff",
+      "modelCalls": "disabled"
+    },
+    "verifiedFiles": 49
+  },
+  "sampleWorkout": {
+    "storageKey": "gym-swap.workouts.v1",
+    "title": "Sample workout",
+    "lines": [
+      "Goblet squat — 3 x 8; rest 60 sec",
+      "Dumbbell RDL — 3 x 10",
+      "Seated cable row — 3 x 12",
+      "Machine chest press — 3 x 10",
+      "Barbell split squat — 2 x 8 each leg; bar on upper back, both feet on the floor",
+      "Single-leg floor bridge — 2 x 12 each side"
+    ],
+    "entries": [
+      {
+        "label": "Goblet squat",
+        "matchId": "goblet_squat",
+        "matchSignature": "a1c3e2a1"
+      },
+      {
+        "label": "Dumbbell RDL",
+        "matchId": "dumbbell_rdl",
+        "matchSignature": "a8049b50"
+      },
+      {
+        "label": "Seated cable row",
+        "matchId": "seated_cable_row",
+        "matchSignature": "b0bca9ff"
+      },
+      {
+        "label": "Machine chest press",
+        "matchId": "chest_press_machine",
+        "matchSignature": "e26e8421"
+      },
+      {
+        "label": "Barbell split squat",
+        "matchId": "barbell_split_squat",
+        "matchSignature": "9b936331"
+      },
+      {
+        "label": "Single-leg floor bridge",
+        "matchId": "single_leg_floor_bridge",
+        "matchSignature": "3624164b"
+      }
+    ]
+  },
+  "publicFingerprint": "9175025464dc7a4a3ddb59602d33df485cf818fe83a062e961ca0ba37f958c77",
+  "files": {
+    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "404.html": "141f1b672f8be4ed7dd11c65c38a01c76c625ae64e5e318ec430a165a6837fe7",
+    "_headers": "7adfc9d081df47326b338a222a5b2cc931d6dcafd75581391fe36380ca40a1ca",
+    "_redirects": "b3288aba1bb4d82b162166aed9a20388f9b699f5dd13e27f48be4272115448e2",
+    "about/index.html": "9e6f4869d2125f26bfc98b8c080f03f7dd8cd2a79fc1cd0e58373e63188a2ebe",
+    "data.mjs": "d93f6c939470a24ffd6218766b562cdef8a1fc42a5f2ea5c8791b18ff499fad3",
+    "demo.css": "39854a319260a13ab708bd61a7f7ff74db72e1a5428dad0b736799e3a35b92b0",
+    "icon.svg": "cfb52a1f90be5944741221e20580b976cbf8ad9175f94086833b055fb69bd3fb",
+    "index.html": "4250c7292dd94a30e86f9abe2bf4d5c7bc40f4474ac7a14e2f7363d4fee3396c",
+    "library-pilot.mjs": "dd212e26fbe4290f7ca36c838e3a668de97e83b29b4921a659e9a15ecc398b16",
+    "pilot/index.html": "3455c9ae8cb40d3a954480437769f7207d9dd5fc2ea6b8bbf2fe13b400a903d4",
+    "prototype/a1-comparisons.mjs": "0c00b942a4818fed958a411454a3066d950441a11e6fca398bf1f3543ebd0e3d",
+    "prototype/a1-content.mjs": "5211a7c59039b68a5715ea1328244c8d20290953431e6becb314eaedc89c6c75",
+    "prototype/a1-more-rows.mjs": "8c82a7199e4adfb9fd54c175ceb7fc43873f8b3e47d36e404cdc5d29e4be1b80",
+    "prototype/a1-pulls.mjs": "91fa08b85f3593702f62a5b77bd1575b706e59f6806cdb9f44518fdedecdeeba",
+    "prototype/a2-comparisons.mjs": "e72f3fa1d2058b9976772aaea6f071ff2fce8c99f6ae125dd5286e047927f4d0",
+    "prototype/a2-content.mjs": "c51a2221da901b7e2d8e280534e9ea3e716d87f113e4fe4a8fb8ff2f36918430",
+    "prototype/a3-comparisons.mjs": "38a68101b7d419c04a00d72d62dfaa0a37fcd0878001f242fbaa1b928629c85b",
+    "prototype/a3-content.mjs": "a2d7185e936393ab035849c1715da636b75e954d2656cc35170b6cf5763175fa",
+    "prototype/a4-comparisons.mjs": "1b0171849fba53c52485ac90a72a3f70290ef9e4d0999a3bada457cbc534e05a",
+    "prototype/a4-content.mjs": "a6ae2ce6d9252e8a68574b0da4f7b1607340a7df089b6bd053bef0ab3bf2f132",
+    "prototype/app.mjs": "a1b4c99c7407645c6532738760f60beedcc96cbff76f024e2c0528ef7011a01b",
+    "prototype/assets/chest-supported-row.png": "852ff08045c4ac536d5b3adfde38bb3870df3c3fc402ecd239126f768aea2f92",
+    "prototype/b1-comparisons.mjs": "7d37cbc278af0b19349b4e8956fb15380db025c66b7b0413b38dfdbc0060b9f7",
+    "prototype/b1-content.mjs": "be616c1763d7db7dcb69c3f8b1d17a8ab8fa16929d588ab87465d0c2e613fd9b",
+    "prototype/b2-comparisons.mjs": "c9803bbe292b6ed71ecb9cfe4cc9bdf1e1d52338356a05a09eeec447f8f9c9fa",
+    "prototype/b2-content.mjs": "78e345b3ede8c3b336f448b7232456fb03f1cf7f6ed720073e633cf74dda2b9f",
+    "prototype/b3-comparisons.mjs": "4528236fac117cdb67f41d43c5099b5cf3f26dca9328f0e5266a863c71e385ed",
+    "prototype/b3-content.mjs": "b8be06fa91da09bcecbed5b1c8f92e2595c9acd4b1e50cb9b9b949f23b9bfd64",
+    "prototype/b4-comparisons.mjs": "c3b449e45a8cb4d2249ea84ac8227e8469b23a25a044ade96a690998f4f672e8",
+    "prototype/b4-content.mjs": "f5f6f8b7ec080335d07162fba090342b6d55f3283fd7a7511e1421e60c697b8e",
+    "prototype/card-details.mjs": "5a85510f35b6337b85c22684f7378e9803b387d8072bb1cce7fefd95a4378f1c",
+    "prototype/content.mjs": "ec94f2b07579df44834a89071e7d95d3080334ef9ad66cb9f052fe9a75f74328",
+    "prototype/day1-content.mjs": "07d5e2574da6c01902761c4064fdb08b6439ff79cd7b1018196d3f11ec7f12f2",
+    "prototype/discovery.mjs": "24cec7373d58639b4308fe168c4931bd1c294b599cf95e073349822a9c55a33d",
+    "prototype/equipment-notes-ui.mjs": "250dd4d9a2bdb65aceb7cf3f88c56f8078b2da40e036f4882115ff87c86a4e34",
+    "prototype/equipment-notes.mjs": "47effe26ee422cedc739b7f6918889f7352b2059e5d6bbfcb3085b8bd686d542",
+    "prototype/equipment-suggestions.mjs": "b35c30ab0ed4c53fc53be93c63b52f680efd2b46035101be7567a3976874c993",
+    "prototype/explanation.mjs": "445676ea298993ae50d528e2afc1b395fff35024f3588c4c43a92f46abd268f9",
+    "prototype/index.html": "8a67d2c76ac864319c6d6400939d6360f750e3e2bccdbfc3e7ac4264fc3cd005",
+    "prototype/library-contract.d.mts": "ac246a368e21056dd071330b195dc3e10d6e78043efa0bbafef63df3d22cfaff",
+    "prototype/library-contract.mjs": "bf230fc3520fee2fe5cce41d37aa466fdcdff151f562ff4a9a2517ec9e00a205",
+    "prototype/library.mjs": "3feeeda8502f1e6d6955507877305634a958266d09a9d50431ba94b7a92abbbe",
+    "prototype/preferences.mjs": "5a46c2f5ee5797e060671afb31738b7393228a93838501d8b084c23ca1bd65c4",
+    "prototype/release.mjs": "1fa03f3e0b2b9fdd5cd310701564b0bb58417d7332705e1e394ea77142357d4e",
+    "prototype/requirements.mjs": "95c8814f25b74dce9af208c79e2e0348ec01923f549f71308c3db797c4c74870",
+    "prototype/row-pilot.mjs": "6ce56d2a7dcd19e0e609b0f0c8e8e2a02ddbd4244f93f7c30a47910f4dde50b4",
+    "prototype/scenario.mjs": "c8264199179199d2acb86d188e4bfb8aa47601b50758ea6c1c734238cf9fec0f",
+    "prototype/state.mjs": "2ec3a4bbceeafb6d2e525f5ad37b0ece9b9e6798cb68629ea46d2f7e6cd5507b",
+    "prototype/styles.css": "b655a6e28151888418080b2d9f8240b11bbeff692264a805eeaf00e97347e133",
+    "prototype/swap-undo.mjs": "394ad5ec6317a900551bbf12ea16a28aac1bb0bf0a0e58e1d0219c1d97863e6a",
+    "prototype/workout-library.mjs": "95b00239a06b3a9a467e564021bd57ea1cf379440515cb0ed500dd7f814ab489",
+    "prototype/workout-search.mjs": "eaac5aae81e6e763d8fd5e8bc66687f3b0e35a945ffa3a70d06b57c08f6e174a",
+    "prototype/workout-ui.mjs": "3d822a806eeb0099bc2b5f1344cfb6bec041f0aba46048f154616f8ca996669a",
+    "prototype/workout.css": "9105858ecbacbe40bc7d8f16978e08f513e0a1404a57d479c23680f9ed613f81",
+    "prototype/workout.mjs": "97da3899f760ecfe15001e0af04e8375ea9c7f01ce28cba86158338e52ac6c11"
+  }
+}

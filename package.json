@@ -1,0 +1,15 @@
+{
+  "name": "gym-swap-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Public read-only portfolio snapshot of the Gym Swap frontend. Fully static; no server, worker, database or AI backend.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "preview": "node scripts/preview.mjs"
+  }
+}

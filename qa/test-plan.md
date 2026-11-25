@@ -17,9 +17,8 @@
 
 ### Out of Scope
 - Live AI explanation generation (intentionally disabled in the public portfolio demo).
-- Backend Cloudflare D1 call-counter storage and server-side API keys.
+- Backend services and server-side configuration (the public demo is fully static).
 - Cross-device sync or user accounts (not part of the product).
-- Unreleased local release candidate (`2.9.0-rc.1`).
 
 ## 3. Risk Assessment
 

@@ -26,9 +26,14 @@ Source snapshot recorded in `dist/demo-build.json`:
 
 When the Lab checkout is not present (for example in hosting CI), `npm run build` does not rebuild; it verifies the committed `dist/` against the fingerprint in `demo-build.json` and exits successfully.
 
+## QA and test automation
+
+- [Manual QA: test plan, execution log and 7 Jira bug reports](qa/README.md), with a [Zendesk support workflow](qa/zendesk/README.md) that links tickets to those bugs.
+- [Playwright end-to-end smoke suite](e2e/README.md): 6 tests on desktop and phone viewports, run in GitHub Actions.
+
 ## Build, test, preview
 
-Node 22+. No dependencies to install.
+Node 22+. No runtime dependencies; `@playwright/test` is a dev dependency for the end-to-end suite (`npm ci` before `npm run test:e2e`).
 
 ```sh
 npm run build     # rebuilds dist/ from ../gym-swap-lab (or verifies dist/ when the Lab is absent)

@@ -2,3 +2,5 @@ node_modules/
 .DS_Store
 REVIEW.md
 REVIEW_phone.png
+playwright-report/
+test-results/

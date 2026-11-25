@@ -1,0 +1,85 @@
+Summary,Issue Type,Priority,Labels,Labels,Labels,Description
+"Workout importer silently merges unmatched and typo lines into the previous exercise's notes",Bug,High,workout-flow,parser,data-loss,"Environment: https://gymswap.seeform.ai (Build 2.8.1), Desktop (1280x800) & Mobile (390x844), Chromium.
+
+Steps to Reproduce:
+1. Open Use a workout -> New workout.
+2. Paste 5 numbered lines including '3. Burpees 3x15' and '5. Lat Puldown 3x12' between matched exercises.
+3. Click Review exercises.
+
+Expected Result:
+All 5 numbered lines appear as separate review entries, with unmatched/typo lines kept as standalone unresolved exercises.
+
+Actual Result:
+Only 3 exercises are created. '3. Burpees 3x15' is appended into Exercise 2's Original workout notes and '5. Lat Puldown 3x12' is appended into Exercise 3's Original workout notes."
+"Hiding a favorited swap permanently clears its Favorite state after restore",Bug,Medium,preferences,localstorage,state,"Environment: https://gymswap.seeform.ai (Build 2.8.1), Desktop (1280x800) & Mobile (390x844), Chromium.
+
+Steps to Reproduce:
+1. Open Replace an exercise -> Seated cable row -> Chest-supported dumbbell row.
+2. Click Favorite (changes to Remove favorite).
+3. Click More options -> Hide this exercise.
+4. Open Menu -> Exercise preferences, click Restore on Chest-supported dumbbell row, and reload.
+
+Expected Result:
+Favoriting and hiding are independent; restoring a hidden exercise preserves its Favorite state across reload.
+
+Actual Result:
+Favorites displays 'None yet.' while hidden, and after Restore + reload Chest-supported dumbbell row reverts to unfavorited."
+"View original exercise opens Browse UI while keeping Replace an exercise tab pressed",Bug,Medium,navigation,swap-flow,ux,"Environment: https://gymswap.seeform.ai (Build 2.8.1), Desktop (1280x800) & Mobile (390x844), Chromium.
+
+Steps to Reproduce:
+1. Open Replace an exercise -> Seated cable row -> Chest-supported dumbbell row.
+2. Click View original exercise: Seated cable row.
+
+Expected Result:
+Show original instructions in an inline view/drawer with Back to swaps, or update the active mode tab to Browse exercises.
+
+Actual Result:
+The screen switches to the Browse-style Explore exercise view and discards swap context while the Replace an exercise tab remains pressed."
+"Inverted heading hierarchy (h2 before h1) on landing and empty h1 after search",Bug,Medium,accessibility,wcag,headings,"Environment: https://gymswap.seeform.ai (Build 2.8.1), Desktop (1280x800) & Mobile (390x844), Chromium.
+
+Steps to Reproduce:
+1. Load https://gymswap.seeform.ai/ and inspect h1 and h2 order in the DOM.
+2. Search 'seated cable row' and inspect h1 and h2 again.
+
+Expected Result:
+Each view has one visible, descriptive h1 before any h2 subsections (WCAG 1.3.1 / 2.4.6).
+
+Actual Result:
+Landing renders h2 'Equipment for this visit Optional' before h1 'Explore exercises'. After searching, the h1 element is empty/hidden while visible headings begin at h2."
+"Inconsistent equipment status labels and Use this swap stays enabled when marked In use",Bug,Medium,equipment,swap-flow,ux,"Environment: https://gymswap.seeform.ai (Build 2.8.1), Desktop (1280x800) & Mobile (390x844), Chromium.
+
+Steps to Reproduce:
+1. Open Replace an exercise -> Seated cable row -> Chest-supported dumbbell row.
+2. Expand Check equipment Optional and compare option text in the quick dropdown vs. the panel dropdown.
+3. Set Suitable dumbbell pair to 'This setup is in use' and click Use this swap.
+
+Expected Result:
+Both controls use consistent status labels, and marking required equipment 'In use' disables or warns before confirming the swap.
+
+Actual Result:
+The two dropdowns use different labels ('In use' vs 'This setup is in use'). Use this swap stays enabled despite the conflict warning, confirms the swap, and displays two undo controls (Undo and Undo selection)."
+"Mobile touch targets below 44x44 px and unlabeled equipment filter inputs (390x844)",Bug,Medium,mobile,accessibility,touch-targets,"Environment: https://gymswap.seeform.ai (Build 2.8.1), Mobile (390x844), Chromium.
+
+Steps to Reproduce:
+1. Load https://gymswap.seeform.ai/ at 390x844 viewport.
+2. Open Replace an exercise -> Seated cable row -> Chest-supported dumbbell row and expand Check equipment Optional.
+3. Measure bounding boxes of visible interactive elements and inspect input labels.
+
+Expected Result:
+Mobile interactive controls meet >= 44x44 px tap target size (WCAG 2.5.5) and every input has a direct accessible label.
+
+Actual Result:
+Top demo nav links are 22.5 px tall (About is 40.9x22.5 px), inline source link is 39.1 px tall, and #equipment-filter switch (19.2x19.2 px) plus radio inputs lack direct labels on the input elements."
+"UI copy and control polish: 1 alternatives, Explore another exercise in Replace mode, duplicate back link, no Search Clear",Bug,Low,ui-polish,copy,search,"Environment: https://gymswap.seeform.ai (Build 2.8.1), Desktop (1280x800) & Mobile (390x844), Chromium.
+
+Steps to Reproduce:
+1. Open Replace an exercise and check counts for Leg press and Hip-thrust machine.
+2. Open Seated cable row -> See other swaps and scroll to the bottom button.
+3. Open Use a workout -> open an exercise -> click See alternatives.
+4. Search 'row' in Browse exercises and press Escape.
+
+Expected Result:
+Singular '1 alternative', 'Swap another exercise' in Replace mode, a single 'Back to workout entry' control, and a Clear button or Escape reset on Search.
+
+Actual Result:
+Displays '1 alternatives', renders 'Explore another exercise' in Replace mode, renders two stacked 'Back to workout entry' controls, and Search has no Clear button or Escape reset."

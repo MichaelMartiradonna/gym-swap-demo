@@ -35,6 +35,8 @@ Applies First Reply and Next Reply targets by ticket priority:
 | **Normal** | 8 hours | 24 hours |
 | **Low** | 24 hours | 48 hours |
 
+![Gym Swap Beta Support SLA targets by priority](screenshots/07-sla-targets.png)
+
 ![Gym Swap Beta Support SLA policy](screenshots/04-sla-policy.png)
 
 ## Tickets Triaged & Resolved (`9/9 Solved`)
